@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad2</title>
+    <link rel="stylesheet" href="unidad2.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            
+            <nav>
+
+              <a href="file:///C:/Users/keyba/OneDrive/Desktop/PrograWebURL/ARQUITECTURA%20DE%20COMPUTADORAS.HTML">Inicio</a> 
+              <a href="unidad1.html">Unidad 1</a>
+              <a href="unidad2.html">Unidad 2</a>
+              <a href="unidad3.html">Unidad 3</a>
+              <a href="unidad4.html">Unidad 4</a>
+              
+            </nav>
+        </div>>
+    </header>
+
+   <div class="container">
+    <div class="carta">
+        <h1>UNIDAD 2</h1>
+        <h2>2.1 ORGANIZACION DEL PROCESAROR</h2>
+        <p><i>La función principal de un procesador es ejecutar instrucciones y la organización que tiene viene condicionada por las tareas que debe realizar y por cómo
+            debe hacerlo.
+            Los procesadores están diseñados y operan según una señal de sincronización.
+            Esta señal, conocida como señal de reloj, es una señal en forma de onda cuadrada periódica con una determinada frecuencia. Todas las operaciones hechas
+            por el procesador las gobierna esta señal de reloj: un ciclo de reloj determina
+            la unidad básica de tiempo, es decir, la duración mínima de una operación
+            del procesador.
+            Para ejecutar una instrucción, son necesarios uno o más ciclos de reloj, dependiendo del tipo de instrucción y de los operandos que tenga.
+            Las prestaciones del procesador no las determina solo la frecuencia de reloj,
+            sino otras características del procesador, especialmente del diseño del juego de
+            instrucciones y la capacidad que tiene para ejecutar simultáneamente múltiples instrucciones</p></i>
+            <img src = "C:\Users\keyba\Downloads\OracleXE213_Win64\2.1.png"  width="300" height="100">
+        
+        
+        
+        <h2 id="2.2">2.2 ESTRUCTURA DE REGISTROS</h2>
+        <p><i>Un registro es una memoria que esta ubicada en el procesador y se encuentra en el nivel más alto en la jerarquía de memoria, por lo tanto tiene una alta velocidad pero con poca capacidad para almacenar datos que va desde los 4 bits hasta los 64 bits dependiendo del procesador que se utilice. Los datos  que almacena son los que se usan frecuentemente.</p></i>
+            <img src = "C:\Users\keyba\Downloads\OracleXE213_Win64\2,2.gif"  width="300" height="100">
+      
+
+        <h2>2.2.1 REGISTROS VARIABLES PARA EL USUARIO</h2>
+        <p><i>Son aquellos que pueden ser referenciado por medio del lenguaje maquina que ejecuta la CPU, los registro que normalmente disponibles son:
+            Registros de propósito general, son aquellos que pueden guardar tanto datos como direcciones
+            Registro de datos, que pueden ser asignados por el programador a diversas funciones. En algunos casos son de propósito general y pueden ser empleados por cualquier instrucción de máquina que lleve a cabo operaciones sobre los datos.
+            Registros de direcciones, contienen direcciones en la memoria principal de datos y este tipo de registro puede ser de propósito general o estar a un modo específico de direccionamiento.
+            Códigos de condición, también conocidos como indicadores o flags. Los códigos de  condición, son bits activados por el procesador como resultado de determinadas operaciones.
+        </p></i>
+
+        <h2>2.2.2 REGISTREOS DEL CONTROL DE ESTADOS</h2>
+        
+        <p><i>Se utilizan para controlar las operaciones del procesador, la mayor parte de estos registros no son visibles al usuario y algunos pueden ser accesibles a las instrucciones de maquina ejecutadas en un modo de control. Los registros utilizados son los siguientes:
+            - Registro de direcciones de memoria (MAR), el cual contiene la dirección en donde se efectuará la próxima lectura o escritura de datos. El numero de direcciones depende del tamaño de la MAR.
+            - Registro de datos de memoria (MBR), contiene los datos que van a ser escritos en la memoria o los que fueron leídos en ella.
+            - Registro de direcciones de entrada y salida (I/O AR), especifica al dispositivo ya sea de entrada o salida
+            - Registro de datos de entrada y salida (I/O BR), es una área temporal en donde se lleva a cabo el intercambio de datos entre el procesador y el dispositivo de entrada y salida que esta especificado en IOAR.
+            - Registro de instrucciones (IR), contiene la dirección de la siguiente instrucción que se va a ejecutar palabras de estado del programa (PSW), contiene códigos de condición junto con otras informaciones de estado como el signo, acarro, desbordamiento, entre otras.
+            
+        </p></i>
+
+        <h2>2.2.3 EJEMPLO DE REGISTROS DE CPU REALES</h2>
+        <p><i>I-8086
+            Los modos de direccionamiento del 8086 (Crawford & Gelsinger, 1987) son muy
+            irregulares. Los registros del procesador, se usan para contener los datos con que se
+            está trabajando puesto que el acceso a los registros es mucho más rápido que los
+            accesos a memoria. Se pueden realizar operaciones aritméticas y lógicas,
+            comparaciones, entre otras.
+            Hay un campo para un registro (reg), que específica uno de los operandos, y otros dos
+            campos (mod y r/m) para el otro.
+            Los modos del 8086 son indirectos por registro, indexados o directos por registro.
+            <h3>Registros Propósito General:</h3>
+            <ul>
+            <il> Registro AX: El registro AX es el registro acumulador, es utilizado para
+            operaciones que implican entrada/salida, y multiplicación y división (estas dos
+            últimas en conjunto con el registro DX).</il>
+            <il>Registro BX: El registro BX es el registro base, y es el único registro de propósito
+            general que puede ser un índice para direccionamiento indexado.</il>
+            <il>Registro CX: El registro CX es conocido como el registro contador. Puede
+            contener un valor para controlar el número de veces que un ciclo se repite.</il>
+            <il>Registro DX: El registro DX es el registro de datos</il>
+            <h3>Registros Índice:</h3>
+            <il>Registro SI: El registro índice fuente de 16 bits es requerido por algunas
+            operaciones con cadenas de caracteres.</il>
+            <il>Registro DI: El registro índice destino también es requerido por algunas
+            operaciones con cadenas de caracteres.</il>
+            <h3>Registros Apuntadores:</h3>
+            <il>Registro SP: Apuntador de pila de 16 bits proporciona un valor de
+            desplazamiento que se refiere a la palabra actual que está siendo procesada en
+            la pila.</il>
+            <il>Registro BP: El apuntador base de 16 bits facilita la referencia de parámetros
+            dentro de la pila.</il>
+            </ul>
+        </p></i>
+        
+        <h2>2.3 CICLO DE INSTRUCCION</h2>
+        <p><i> La función básica que realiza un computador es la ejecución de un programa. Un programa consiste en un conjunto de instrucciones y datos almacenados en la unidad de memoria. La CPU es la encargada de ejecutar las instrucciones especificadas en el programa.
+            La secuencia de operaciones realizadas en la ejecución de una instrucción constituye lo que se denomina ciclo de instrucción. Lo más cómodo es considerar que el procesamiento del ciclo de instrucción consta de dos fases:
+            a)      Fase de Búsqueda
+            b)      Fase de Ejecución
+            <img src = "C:\Users\keyba\Downloads\OracleXE213_Win64\2.3.png"  width="300" height="100">
+        </p></i>
+
+        <h2>2.3.1 CICLO FETCH-DECODE-EXCUTE</h2>
+        <p><i>El encargado de ejecutar un programa en una computadora u otro sistema computacional es el CPU, lo realiza siguiendo el llamado ciclo Fetch Decode Execute, con este ciclo se ejecutan todas las tareas que una computadora puede realizar.
+            Este ciclo tiene algunas variantes y conforme ha avanzado el tiempo y la tecnología ha sufrido algunos cambios, pero el ciclo básico se conforma de las siguientes etapas:
+            Traer la instrucción: Se obtiene la instrucción desde memoria y se almacena en el registro del CPU para instrucciones.
+            Decodificar la instrucción: Se identifica el modo de direccionamiento de la instrucción y la ubicación de los datos a tratar, ya sea de memoria, registro o instrucción directamente.
+            Carga de Parámetros: Se ejecuta la lectura, cargando todos los datos identificados en el paso anterior.
+            Ejecutar: Se ejecuta la instrucción ya configurada, realiza la tarea indicada, ya sea una suma, resta, almacenar información, extraer información etc.
+            Almacenar: Se almacena el resultado obtenido de ejecutar la instrucción, por ejemplo, el resultado de una suma o un índice (Número) como resultado de éxito de almacenar u obtener información de un archivo, entre otros.
+            Actualizar PC: Esta etapa es la de actualizar el registro PC (Program Counter) que contiene la siguiente dirección a ejecutar.
+            <img src = "C:\Users\keyba\Downloads\OracleXE213_Win64\2.3.1.png"  width="300" height="100">    
+        </p></i>
+        
+        <h2>2.3.2 SEGMENTACION DE INSTRUCCIONES</h2>
+        <p><i>• La segmentación de cauce (pipelining) es una
+            forma particularmente efectiva de organizar el
+            hardware de la CPU para realizar más de una
+            operación al mismo tiempo.
+            • Consiste en descomponer el proceso de ejecución
+            de las instrucciones en fases o etapas que
+            permitan una ejecución simultánea.
+            • Explota el paralelismo entre las instrucciones de
+            un flujo secuencial.
+            <img src = "C:\Users\keyba\Downloads\OracleXE213_Win64\2.3.2.png"  width="300" height="100"></p></i>
+
+        <h2>2.3.3 CONJUNTO DE INTERRUPCIONES, CARACTERISTICAS, FUNCIONES</h2>
+        <p><i>Una interrupción es cualquier disrupción en la capacidad de la solución de base de datos para prestar servicio a las aplicaciones de usuario. Las interrupciones se pueden clasificar en dos grupos: interrupciones no planificadas e interrupciones planificadas.
+            -Interrupciones imprevistas
+            -Interrupciones planificadas
+            .Firmas de interrupción
+            .Coste de parada
+            .Tolerancia a interrupciones
+            .Estrategias de recuperación y evitación</p></i>
+
+
+        <h2>2.3.4 METODOS DE DIRECCIONAMIENTO</h2>
+        <p><i>Contar con diferentes formatos de instrucciones, implica contar con diferentes formas de obtener los operandos de las instrucciones. Por lo general a estas múltiples formas se les conoce como modos de direccionamiento. Los modos de direccionamiento en MIPS son:
+            <ul>
+            <il>-Direccionamiento por registro, donde los operandos son registros. Los datos a operar están contenidos en 2 registros de 32 bits y el resultado será colocado en otro registro, del mismo tamaño.</il>
+            <il>-Direccionamiento base o desplazamiento, donde uno de los operandos está en una localidad de memoria cuya dirección es la suma de un registro y una constante que forma parte de la misma instrucción</il>
+            <il>-Direccionamiento inmediato; donde uno de los operandos es una constante que está en la misma instrucción</il>
+            <il>-Direccionamiento relativo al PC, donde se forma una dirección sumando una constante, que está en la instrucción, con el registro PC (Program Counter). El resultado de la suma corresponde a la dirección destino si un brinco condicional se va a realizar.</il>
+            <il>-Direccionamiento pseudo directo, donde la dirección destino de un salto corresponde a la concatenación de 26 bits que están en la misma instrucción con los bits mas significativos del PC.</il></p></i>
+            </ul>   
+
+        <h2>2.4 CASOS DE ESTUDIO DE CPU REALES</h2>
+        <p><i>Motorola 68000
+            En el Motorola 68000 el mismo direccionamiento lleva implícito el tipo de registro sobre el que trabaja (direcciones o datos). Está basado en dos bancos de 8 registros de 32 bits. Un banco es de datos (Dn) y el otro de punteros (An). Además contiene un contador de programa de 32 bits y un registro de estado de 16 bits. Los registros de datos (D0 a D7) se pueden usar como registros de 32 bits (.l), 16 bits (.w) y 8 bits (.b). Cualquiera de ellos puede usarse como acumulador, índice o puntero.
+            Acepta los siguientes modos de direccionamiento:
+            Implícito (o inherente).
+            Inmediato.
+            Absoluto.
+            Directo a registro.
+            Indirecto.
+            Relativo a PC con desplazamiento.
+            Relativo a PC con índice y desplazamiento.</p></i>
+   </div>
+    
+</body>
+</html>

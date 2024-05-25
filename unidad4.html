@@ -1,0 +1,195 @@
+<html>
+<head lang="en">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong|Sedan">
+<link rel="stylesheet" href="unidad4.css">
+<title>AquitecturaDeComputadoras</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            
+            <nav>
+
+              <a href="file:///C:/Users/keyba/OneDrive/Desktop/PrograWebURL/ARQUITECTURA%20DE%20COMPUTADORAS.HTML">Inicio</a>
+              <a href="unidad1.html">Unidad 1</a>
+              <a href="unidad2.html">Unidad 2</a>
+              <a href="unidad3.html">Unidad 3</a>
+              <a href="unidad4.html">Unidad 4</a>
+              
+            </nav>
+        </div>>
+    </header>
+
+    <section id="Unidades">
+        <div class="container">
+        <h1>Unidad 4</h2>
+        <h2>4.1 ASPECTOS DE LA COMPUTACION PARALELA</h2>
+        <p><i>La computación paralela consiste en el uso simultáneo de varios procesadores o
+             núcleos que ejecutan una serie de instrucciones que conforman las distintas 
+             partes en las que se ha descompuesto un problema computacional.</p></i>
+             <img src = "C:\Users\keyba\Downloads\OracleXE213_Win64\4.1.jpg"  width="300" height="100">
+        
+        <h2>4.2 TIPOS DE COMPUTACION PARALELA</h2>
+        <p><i>
+            <ul>
+            <il><br>- PARALELISMO A NIVEL DE BIT: Desde el advenimiento de la integración a gran escala (VLSI) como tecnología de fabricación de chips de computadora en la década de 1970 hasta alrededor de 1986, la aceleración en la arquitectura de computadores se lograba en gran medida duplicando el tamaño de la palabra en la computadora, la cantidad de información que el procesador puede manejar por ciclo. </il></br>
+            <il><br>- PARALELISMO A NIVEL DE INSTRUCCIÓN: Un programa de ordenador es, en esencia, una secuencia de instrucciones ejecutadas por un procesador. Estas instrucciones pueden reordenarse y combinarse en grupos que luego son ejecutadas en paralelo sin cambiar el resultado del programa.</il></br>
+            <il><br>- PARALELISMO DE DATOS: El paralelismo de datos es el paralelismo inherente en programas con ciclos, que se centra en la distribución de los datos entre los diferentes nodos computacionales que deben tratarse en paralelo. </il></br>
+            <il><br>- PARALELISMO DE TAREAS: El paralelismo de tareas es la característica de un programa paralelo en la que cálculos completamente diferentes se pueden realizar en cualquier conjunto igual o diferente de datos.</il></br>
+           </il>
+        </ul>
+            </p></i>
+            <img src = "C:\Users\keyba\Downloads\OracleXE213_Win64\4.2.gif"  width="300" height="100">
+        
+        
+        <h2>4.2.1 CLASIFICACION</h2>
+        <p><i></p></i>
+
+
+        <h2>4.2.2 ARQUITECTURA DE DIRECCIONES SECUENCIALES</h2>
+        <p><i>La arquitectura de computadoras es el diseño conceptual y la estructura operacional fundamental de un sistema que conforma una computadora. Es decir, es un modelo y una descripción funcional de los requerimientos y las implementaciones de diseño para varias partes de una computadora, con especial interés en la forma en que la unidad central de proceso (CPU) trabaja internamente y accede a las direcciones de memoria.
+            Los Sistemas Concurrentes como parte de las Arquitecturas Paralelas, han ido desarrollándose con el paso del tiempo y se han propuesto diversos esquemas de clasificación de los ordenadores entre ellos tenemos las siguientes arquitecturas: SISD, SIMD, MISD, MIMD.</p></i>
+
+
+        <h2>4.2.3 ORGANIZACION DE DIRECCIONES DE MEMORIA</h2>
+        <p><i>La memoria en una computadora está organizada en forma jerárquica, la
+            memoria cache mantiene los bloques usados con más frecuencia en una
+            memoria pequeña y rápida que se encuentra en la CPU, la memoria virtual en
+            páginas aumenta el tamaño de la memoria principal a través de almacenar en
+            disco, las memorias cache y la virtual se usan en una computadora, la memoria
+            cache mejora el tiempo de acceso a la memoria principal, y la memoria virtual en
+            páginas extiende el tamaño de la memoria principal. El dato más simple en memoria RAM es el bit, 0 o 1, después se toma cierta
+            cantidad de bits para guardar datos en RAM, en años pasados se han tomado 4,
+            8, 16, y 32 bits para formar unidades de almacenamiento denominadas: palabras
+            de computadora. Así cada palabra en memoria tiene para su localización una dirección de
+            memoria RAM, esa dirección es un número hexadecimal, esos números
+            hexadecimales los conoce y controla el administrador de memoria. Las
+            direcciones de memoria se pueden manejar explícitamente por el programador,
+            utilizando apuntadores, (modo dinámico) o bien, dejar que el compilador del
+            lenguaje empleado asigne memoria a las variables que se utilizan en un
+            programa. (Modo estático). </p></i>
+
+
+        <h2>4.3 SISTEMAS DE MEMORIA COMPARTIDA</h2>
+        <p><i><br>Los sistemas de  memoria compartida distribuida (DSM) representan la creación hibrida de dos tipos de computación paralelos: la memoria distribuida en sistemas multiprocesador y los sistemas distribuidos. Ellos proveen la abstracción de memoria compartida en sistemas con memorias distribuidas físicamente y consecuentemente combinan las mejores características de ambos enfoques. 
+            La cuestión de la consistencia adquiere importancia en los sistemas DSM que replican el contenido de la memoria compartida mediante su almacenamien­to en las cachés de computadores separados. Cada proceso tiene un gestor de réplicas local, el cual está encargado de mantener copias en caché para los objetos. En la mayor parte de las implementaciones, los datos se leen desde las réplicas loca­les por cuestiones de eficiencia, pero las actualizaciones deben propagarse al resto de gestores de réplica. 
+        </br>
+            
+           <br> VENTAJAS / DESVENTAJAS DE LA MEMORIA DISTRIBUIDA </br>
+            
+            <br>Ventajas:  
+            
+            Ilusión de una memoria física compartida, sin cuellos de botella.  
+            Escabilidad (podemos extender el sistema sin mucho problema).  
+            Menor costo.</br>
+              
+            <br>Desventajas:  
+            
+            Topología de red muy importante.  
+            Administración de la red.  </br>
+              </p></i>
+              <img src = "C:\Users\keyba\Downloads\OracleXE213_Win64\4.3.webp"  width="300" height="100">
+
+
+        <h2>4.3.1 MULTIPROCESADORES</h2>
+        <p><i>El multiprocesamiento simétrico es un tipo de procesamiento en el que dos o más procesadores idénticos están conectados a una única memoria principal compartida. La mayoría de los sistemas multiprocesador actuales utilizan una arquitectura SMP. En el caso de los procesadores multinúcleo, la arquitectura SMP se aplica a los núcleos, tratándolos como procesadores independientes. Se utiliza ampliamente en diversos entornos informáticos que exigen computación de alto rendimiento. Se emplea habitualmente en servidores, donde deben ejecutarse varias tareas simultáneamente. Al distribuir las tareas entre varios procesadores, el multiprocesamiento simétrico permite una multitarea eficiente y mejora el rendimiento general del sistema.</p></i>
+        <img src = "C:\Users\keyba\Downloads\OracleXE213_Win64\4.3.1.gif"  width="300" height="100">
+
+        <h2>4.3.2 REDES DE INTERCONECCION DINAMICA</h2>
+        <p><i>Es la organización más común en los computadores personales y servidores.
+
+            El bus consta de líneas de dirección, datos y control para implementar:
+            
+            El protocolo de transferencias de datos con la memoria.
+            El arbitraje del acceso al bus cuando más de un procesador compite por utilizarlo.
+            Los procesadores utilizan cachés locales para:
+            
+            Reducir el tiempo medio de acceso a memoria, como en un monoprocesador.
+            Disminuir la utilización del bus compartido.</p></i>
+
+
+        <h2>4.3.3 MEDIO COMPARTIDO</h2>
+        <p><i>Un multiprocesador puede verse como un computador paralelo compuesto por varios procesadores interconectados que comparten un mismo sistema de memoria.
+
+            Los sistemas multiprocesadores son arquitecturas MIMD con memoria compartida. Tienen un único espacio de direcciones para todos los procesadores y los mecanismos de comunicación se basan en el paso de mensajes desde el punto de vista del programador.
+            
+            Dado que los multiprocesadores comparten diferentes módulos de memoria, pudiendo acceder a un mismo módulo varios procesadores, a los multiprocesadores también se les llama sistemas de memoria compartida.
+            Dependiendo de la forma en que los procesadores comparten la memoria, se clasifican en sistemas multiprocesador UMA, NUMA y COMA.
+            
+            Multiproceso es tradicionalmente conocido como el uso de múltiples procesos concurrentes en un sistema en lugar de un único proceso en un instante determinado. Como la multitarea que permite a múltiples procesos compartir una única CPU, múltiples CPUs pueden ser utilizados para ejecutar múltiples hilos dentro de un único proceso.
+            
+            El multiproceso para tareas generales es, a menudo, bastante difícil de conseguir debido a que puede haber varios programas manejando datos internos (conocido como estado o contexto) a la vez.</p></i>
+        
+
+        <h2>4.4 SISTEMAS DE MEMORIA DISTRIBUIDA</h2>
+        <p><i>Cada procesador tiene su propia memoria y la comunicación se realiza por intercambio explícito de mensajes a través de una red.
+
+            Ventajas
+            El número de nodos puede ir desde algunas decenas hasta varios miles (o más).
+            La arquitectura de paso de mensajes tiene ventajas sobre la de memoria compartida cuando el número de procesadores es grande.
+            El número de canales físicos entre nodos suele oscilar entre cuatro y ocho.
+            Esta arquitectura es directamente escalable y presenta un bajo coste para sistemas grandes.
+            Desventajas
+            Se necesitan técnicas de sincronización para acceder a las variables compartidas.
+            La contención en la memoria puede reducir significativamente la velocidad.
+            No son fácilmente escalables a un gran número de procesadores.</p></i>
+            <img src = "C:\Users\keyba\Downloads\OracleXE213_Win64\4.4.jpg"  width="300" height="100">
+
+        <h2>4.4.1 MULTICOMPUTADORES</h2>
+        <p><i>Los sistemas multicomputadores se pueden ver como un computador paralelo en el cual cada procesador tiene su propia memoria local. En estos sistemas la memoria se encuentra distribuida y no compartida como en los sistemas multiprocesador. Los computadores se comunican a través de paso de mensajes, ya que éstos sólo tienen acceso directo a su memoria local y no al las memorias del resto de procesadores.
+
+            El diagrama de bloques de un sistema multicomputador coincide con el de los sistemas UMA, la diferencia viene dada porque la red de interconexión no permite un acceso directo entre memorias, sino que la comunicación se realiza por paso de mensajes. La transferencia de los datos se realiza a través de la red de interconexión que conecta un subconjunto de procesadores con otro subconjunto. La transferencia de unos procesadores a otros se realiza por tanto por múltiples transferencias entre procesadores conectados dependiendo del establecimiento de dicha red.
+            
+            Dado que la memoria está distribuida entre los diferentes elementos de proceso, estos sistemas reciben el nombre de distribuidos. Por otra parte, estos sistemas son débilmente acoplados, ya que los módulos funcionan de forma casi independiente.</p></i>
+            <img src = "C:\Users\keyba\Downloads\OracleXE213_Win64\4.4.1.jpg"  width="300" height="100">
+
+        <h2>4.4.2 REDES DE INTERCONECCION ESTADISTICAS</h2>
+        <p><i>Los multicomputadores utilizan redes estáticas con enlaces directos entre nodos. Cuando un nodo recibe un mensaje lo procesa si viene dirigido a dicho nodo. Si el mensaje no va dirigido al nodo receptor lo reenvía a otro por alguno de sus enlaces de salida siguiendo un protocolo de encaminamiento.</p></i>
+
+
+        <h2>4.5 CASOS PARA ESTUDIOS</h2>
+        <p><i><br>Por numerosos motivos, el procesamiento distribuido se ha convertido en un área de gran importancia e interés dentro de la ciencia de la computación, produciendo profundas transformaciones en las líneas de investigación y desarrollo.
+
+            Interesa realizar investigación en la especificación, transformación, optimización y evaluación de algoritmos distribuidos y paralelos. Esto incluye el diseño y desarrollo de sistemas paralelos, la transformación de algoritmos secuenciales en paralelos, y las métricas de evaluación de performance sobre distintas plataformas de soporte (hardware y software). Más allá de las mejoras constantes en las arquitecturas físicas de soporte, uno de los mayores desafíos se centra en cómo aprovechar al máximo la potencia de las mismas.
+        </br>
+
+            <br>Líneas de investigación y desarrollo
+            Paralelización de algoritmos secuenciales. Diseño y optimización de algoritmos.
+            Arquitecturas multicore y multithreading en multicore.
+            Modelos de representación y predicción de performance de algoritmos paralelos.
+            Mapping y scheduling de aplicaciones paralelas sobre distintas arquitecturas multiprocesador.
+            Métricas del paralelismo. Speedup, eficiencia, rendimiento, granularidad, superlinealidad.
+            Balance de carga estático y dinámico. Técnicas de balanceo de carga.
+            Análisis de los problemas de migración y asignación óptima de procesos y datos a procesadores.
+            Patrones de diseño de algoritmos paralelos.
+            Escalabilidad de algoritmos paralelos en arquitecturas multiprocesador distribuidas.
+            Implementación de soluciones sobre diferentes modelos de arquitectura homogéneas y heterogéneas.
+            Laboratorios remotos para el acceso transparente a recursos de cómputo paralelo.
+            Capa física (physical layer):</br>
+            
+           <br> GPU PhysX
+            CPU PhysX
+            Capa de gráficos (graphics layer):
+            
+            GPU DirectX Windows</br>
+           <br> Intel
+            Capa física (physical layer):
+            
+            No GPU PhysX
+            CPU Havok</br>
+            <br>Capa de gráficos (graphics layer):
+            
+            GPU DirectX Windows
+            AMD</br>
+           <br> Capa física (physical layer):
+            
+            No GPU PhysX
+            CPU Havok</br>
+           <br> Capa de gráficos (graphics layer):
+            
+            GPU DirectX Windows</br></p></i>
+            <img src = "C:\Users\keyba\Downloads\OracleXE213_Win64\4.5.jpg"  width="300" height="100">
+            <img src = "C:\Users\keyba\Downloads\OracleXE213_Win64\4.55.jpg"  width="300" height="100">
+</body>
+</html>

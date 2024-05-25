@@ -1,0 +1,70 @@
+h1.a {
+  font-family: "Sedan", serif;
+  color: #8D1E6C;
+  padding: 20px;
+  font-size: extralarge;
+}
+
+body {
+    text-align: center; /* Centra el contenido horizontalmente */
+  }
+
+  header {
+    background-color: #E2B4F6; /* Color de fondo en el Header*/
+  }
+
+  .boton-menu {
+    background-color: #A0F5F3;
+    color: #F123E6 ;
+    font-size: large;
+    padding: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: "Courier New", monospace;
+
+  }
+  
+  .menu-desplegable {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .contenido-desplegable {
+    display: none;
+    position: absolute;
+    background-color: #FAE2F7;
+    min-width: 400px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,20%); 
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+}
+  
+  .contenido-desplegable li {
+    list-style: none;
+  }
+  
+  /* Estilos para los enlaces dentro del menú desplegable */
+  .contenido-desplegable a {
+    color: #7B166D;
+    padding: 20px 25px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Cambiar el color de fondo del enlace al pasar el mouse por encima */
+  .contenido-desplegable a:hover {
+    background-color: white;
+  }
+  
+  /* Mantener el menú desplegable abierto mientras el cursor está sobre él o el contenido */
+  .menu-desplegable:hover .contenido-desplegable,
+  .contenido-desplegable:hover {
+    display: block;
+  }
+  
+  /* Cambiar el color de fondo del botón al pasar el ratón por encima del contenedor */
+  .menu-desplegable:hover .boton-menu {
+    background-color: #4C157D;
+  }
